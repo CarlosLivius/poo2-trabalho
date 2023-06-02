@@ -41,8 +41,7 @@ public class Menu {
 
         System.out.println("O restaurante ja recebeu o seu pedido.");
         
-        String mensagemPreparo = comida.preparar();
-        System.out.println(mensagemPreparo);
+        comida.preparar();
     }
 
     public static Comida criarComida(ComidaFactory factory, Scanner sc) {

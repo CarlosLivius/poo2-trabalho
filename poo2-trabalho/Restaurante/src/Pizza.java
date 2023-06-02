@@ -16,19 +16,16 @@ public class Pizza implements Comida {
     }
 
     @Override
-    public String preparar() {
-        String mensagem = "Pizza com borda " + borda + ", massa " + massa + ", recheio de " + recheio + " e queijo " + queijo + " está sendo preparada.";
+    public void preparar() {
 
-        System.out.println(mensagem);
 
+        System.out.println("Pizza com borda " + borda + ", massa " + massa + ", recheio de " + recheio + " e queijo " + queijo + " está sendo preparada.");
         try {
             Thread.sleep(5000); // Aguarda 5 segundos
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         notificarObservers();
-        return mensagem;
     }
 
     @Override

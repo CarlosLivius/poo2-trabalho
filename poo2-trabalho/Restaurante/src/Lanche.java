@@ -14,15 +14,14 @@ public class Lanche implements Comida {
     }
 
     @Override
-    public String preparar() {
+    public void preparar() {
+        System.out.println("Lanche com hambúrguer de " + carne + ", queijo " + queijo + " e " + salada + " esta sendo preparado");
         try {
             Thread.sleep(5000); // Aguarda 5 segundos
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         notificarObservers();
-        return "Lanche com hambúrguer de " + carne + ", queijo " + queijo + " e " + salada + " esta sendo preparado";
     }
 
     @Override

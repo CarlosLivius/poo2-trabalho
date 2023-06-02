@@ -12,19 +12,16 @@ public class Pastel implements Comida {
     }
 
     @Override
-    public String preparar() {
-        String mensagem = "Pastel de " + recheio + " tamanho " + tamanho + " está sendo preparado.";
+    public void preparar() {
 
-        System.out.println(mensagem);
-
+        System.out.println("Pastel de " + recheio + " tamanho " + tamanho + " está sendo preparado.");
         try {
             Thread.sleep(5000); // Aguarda 5 segundos
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         notificarObservers();
-        return mensagem;
+
     }
 
     @Override
