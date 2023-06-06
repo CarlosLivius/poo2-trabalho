@@ -6,6 +6,7 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         ComidaFactory factory;
         Comida comida;
+        int verdadeiro = 1;
 
         System.out.println("Bem-vindo ao menu! O que deseja comer?");
         System.out.println("1 - Lanche");
@@ -31,6 +32,42 @@ public class Menu {
                 System.out.println("Opção inválida!");
                 return;
         }
+        while (verdadeiro==1) {
+        System.out.println("Deseja colocar adicionais? ");
+        System.out.println("1 - Mais queijo");
+        System.out.println("2 - Ervilha");
+        System.out.println("3 - Milho");
+        System.out.println("4 - Ovo");
+        System.out.println("5 - Não");
+        int opcao2 = sc.nextInt();
+
+        switch (opcao2) {
+            case 1:
+                comida = new MaisQueijo(comida);
+                System.out.println("Mais queijo adicionada");
+                break;
+            case 2:
+                comida = new Ervilha(comida);
+                System.out.println("Ervilha adicionada");
+                break;
+            case 3:
+                comida = new Milho(comida);
+                System.out.println("Milho adicionado");
+                break;
+            case 4:
+                comida = new Ovo(comida);
+                System.out.println("Ovo adicionado");
+                break;
+            case 5:
+                verdadeiro=0;
+                break;
+            default:
+                System.out.println("opção invalida");
+                break;
+        }
+    }
+
+
 
         System.out.println("Digite seu nome:");
         String nomeCliente = sc.next();
@@ -42,6 +79,10 @@ public class Menu {
         System.out.println("O restaurante ja recebeu o seu pedido.");
         
         comida.preparar();
+        if(comida instanceof ComidaDecorator){
+            System.out.print("Com adicionais: ");
+            comida.MostrarAdicionais();
+        }
     }
 
     public static Comida criarComida(ComidaFactory factory, Scanner sc) {
