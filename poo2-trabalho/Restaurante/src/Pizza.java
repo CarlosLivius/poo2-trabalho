@@ -43,4 +43,7 @@ public class Pizza implements Comida {
             observer.atualizar(this);
         }
     }
+    public void MostrarAdicionais(){
+
+    }
 }
