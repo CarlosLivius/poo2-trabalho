@@ -39,4 +39,7 @@ public class Pastel implements Comida {
             observer.atualizar(this);
         }
     }
+    public void MostrarAdicionais(){
+
+    }
 }
