@@ -21,5 +21,4 @@
     <Button fx:id="finalText" onAction="#onFinalButtonClick" prefHeight="25.0" prefWidth="115.0" text="Finalizar Pedido" textAlignment="CENTER" />
 
     <Label fx:id="finalText" prefHeight="30.0" prefWidth="116.0" />
-   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
 </fx:root>

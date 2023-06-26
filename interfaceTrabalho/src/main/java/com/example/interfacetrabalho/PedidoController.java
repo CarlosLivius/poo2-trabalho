@@ -80,7 +80,7 @@ public class PedidoController {
 
     public void carregarRecheio(){
         Recheio recheio1 = new Recheio(1, "Mussarela");
-        Recheio recheio2 = new Recheio(2, "Almondegas");
+        RecRheio recheio2 = new Recheio(2, "Almondegas");
         Recheio recheio3 = new Recheio(3, "Vegetariano");
 
         recheio.add(recheio1);
