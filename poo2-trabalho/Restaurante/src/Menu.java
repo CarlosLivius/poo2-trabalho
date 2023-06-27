@@ -16,7 +16,7 @@ public class Menu {
 
 	    switch (opcaoMenu) {
 	        case 1:
-	            System.out.println("Bem-vindo ao menu! O que deseja comer?");
+	            System.out.println("O que deseja comer?");
 	            System.out.println("1 - Lanche");
 	            System.out.println("2 - Pizza");
 	            System.out.println("3 - Pastel");
@@ -37,7 +37,7 @@ public class Menu {
 	                    comida = criarComida(factory, sc);
 	                    break;
 	                default:
-	                    System.out.println("Opção inválida!");
+	                    System.out.println("Opçao invalida!");
 	                    return;
 	            }
 	            while (verdadeiro == 1) {
@@ -46,7 +46,7 @@ public class Menu {
 	                System.out.println("2 - Ervilha");
 	                System.out.println("3 - Milho");
 	                System.out.println("4 - Ovo");
-	                System.out.println("5 - Não");
+	                System.out.println("5 - Nao");
 	                int opcao2 = sc.nextInt();
 
 	                switch (opcao2) {
@@ -70,7 +70,7 @@ public class Menu {
 	                        verdadeiro = 0;
 	                        break;
 	                    default:
-	                        System.out.println("Opção inválida");
+	                        System.out.println("Opçao invalida");
 	                        break;
 	                }
 	            }
@@ -81,7 +81,7 @@ public class Menu {
 	            PedidoObserver cliente = new Cliente(nomeCliente);
 	            comida.adicionarObserver(cliente);
 
-	            System.out.println("O restaurante já recebeu o seu pedido.");
+	            System.out.println("O restaurante ja recebeu o seu pedido.");
 
 	            comida.preparar();
 	            if (comida instanceof ComidaDecorator) {
@@ -95,7 +95,7 @@ public class Menu {
 	            break;
 	       */
 	        default:
-	            System.out.println("Opção inválida!");
+	            System.out.println("Opçao invalida!");
 	            return;
 	    }
 	}
@@ -104,7 +104,7 @@ public class Menu {
 	    String[] ingredientes;
 	    switch (factory.getClass().getSimpleName()) {
 	        case "LancheFactory":
-	            System.out.println("Escolha o tipo de hambúrguer:");
+	            System.out.println("Escolha o tipo de hamburguer:");
 	            String carne = sc.next();
 	            System.out.println("Escolha o tipo de queijo:");
 	            String queijo = sc.next();
