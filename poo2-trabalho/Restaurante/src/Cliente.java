@@ -1,4 +1,6 @@
-public class Cliente implements PedidoObserver {
+import java.io.Serializable;
+
+public class Cliente implements PedidoObserver,Serializable {
     private String nome;
     private boolean pedidoPronto;
 
