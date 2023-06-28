@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-public class ComidaDecorator implements Comida {
+public class ComidaDecorator implements Comida,Serializable {
     protected Comida comida;
     private List<PedidoObserver> observers = new ArrayList<>();
 
@@ -28,5 +29,7 @@ public class ComidaDecorator implements Comida {
     public void MostrarAdicionais(){
         comida.MostrarAdicionais();
     }
-
+    public void MostraComida(){
+        comida.MostraComida();
+    }
 }
