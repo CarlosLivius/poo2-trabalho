@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pastel implements Comida {
+public class Pastel implements Comida,Serializable {
     private String recheio;
     private String tamanho;
     private List<PedidoObserver> observers = new ArrayList<>();
@@ -41,5 +42,10 @@ public class Pastel implements Comida {
     }
     public void MostrarAdicionais(){
 
+    }
+     public void MostraComida(){
+         System.out.println("Pastel de " + recheio + " tamanho " + tamanho);
+    }
+}
     }
 }
