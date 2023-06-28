@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pizza implements Comida {
+public class Pizza implements Comida,Serializable {
     private String borda;
     private String massa;
     private String recheio;
@@ -45,5 +46,8 @@ public class Pizza implements Comida {
     }
     public void MostrarAdicionais(){
 
+    }
+    public void MostraComida(){
+          System.out.println("Pizza com borda " + borda + ", massa " + massa + ", recheio de " + recheio + " e queijo " + queijo);
     }
 }
