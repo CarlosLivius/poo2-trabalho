@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lanche implements Comida {
+public class Lanche implements Comida,Serializable {
     private String carne;
     private String queijo;
     private String salada;
@@ -41,5 +42,8 @@ public class Lanche implements Comida {
     }
     public void MostrarAdicionais(){
 
+    }
+    public void MostraComida(){
+         System.out.println("Lanche com hambúrguer de " + carne + ", queijo " + queijo + " e " + salada);
     }
 }
